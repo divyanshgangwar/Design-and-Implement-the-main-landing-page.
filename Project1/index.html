@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EduConnect — Mission & Universities</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    
+    .glass {
+      background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      backdrop-filter: blur(6px) saturate(110%);
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: transform .35s ease, box-shadow .35s ease;
+    }
+    .glass:hover { transform: translateY(-8px) scale(1.01); box-shadow: 0 20px 40px rgba(8,15,30,0.25); }
+
+    .stat { font-variant-numeric: tabular-nums; }
+
+    .float-shape {
+      position: absolute; border-radius: 9999px; opacity: .12; filter: blur(22px);
+    }
+
+
+    @media (min-width: 992px) {
+      .hero-right { clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);} 
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-100">
+
+<header class="sticky top-0 z-40 bg-black/30 backdrop-blur-md border-b border-white/5">
+  <div class="container d-flex justify-content-between align-items-center py-3">
+    <a class="d-flex align-items-center gap-2 text-decoration-none" href="#">
+      <div class="rounded-full bg-gradient-to-tr from-indigo-500 to-pink-500 h-9 w-9 flex items-center justify-center"> 
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="text-white"><path d="M12 2L3 7v6c0 5 3.8 9.7 9 11 5.2-1.3 9-6 9-11V7l-9-5z" fill="currentColor"/></svg>
+      </div>
+      <span class="fw-bold ms-2">EduConnect</span>
+    </a>
+
+    <nav class="d-none d-md-flex gap-3 align-items-center">
+      <a href="#mission" class="text-decoration-none text-slate-200/80 hover:text-white">Mission</a>
+      <a href="#universities" class="text-decoration-none text-slate-200/80 hover:text-white">Universities</a>
+      <a href="#stats" class="text-decoration-none text-slate-200/80 hover:text-white">Social</a>
+      <button class="btn btn-sm btn-outline-light ms-2">Get Started</button>
+    </nav>
+  </div>
+</header>
+
+
+<div aria-hidden class="pointer-events-none">
+  <div class="float-shape" style="width:220px;height:220px;left:-40px;top:60px;background:linear-gradient(90deg,#7c3aed,#06b6d4);"></div>
+  <div class="float-shape" style="width:160px;height:160px;right:-30px;top:220px;background:linear-gradient(90deg,#ef4444,#f97316);"></div>
+</div>
+
+<main class="container py-8">
+  <section class="row align-items-center gap-6">
+    
+    <div class="col-lg-6 order-2 order-lg-1">
+      <div class="max-w-2xl">
+        <p class="text-sm uppercase tracking-wide text-pink-400 font-semibold">Connecting learners • universities • opportunity</p>
+        <h1 class="display-5 fw-bold mt-3 text-white leading-tight">A smarter way to discover universities & measure social impact</h1>
+        <p class="lead text-slate-200/80 mt-3">We surface mission-aligned universities, community programs, and live social stats to help students find the perfect match — and let institutions showcase their social impact.</p>
+
+        <div class="d-flex gap-2 mt-4">
+          <a class="btn btn-primary btn-lg me-2" href="#universities">Explore Universities</a>
+          <a class="btn btn-outline-light btn-lg" href="#mission">Our Mission</a>
+        </div>
+
+        <div class="mt-5 p-3 glass rounded-3 d-flex gap-3 align-items-center">
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="student" class="rounded-circle" width="56" height="56">
+          <div>
+            <div class="text-slate-100 fw-semibold">Featured partnership</div>
+            <div class="text-slate-200/80 small">Global Study Hub — scholarship collaboration launched <span class="fw-bold text-white">this month</span>.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+    <div class="col-lg-5 order-1 order-lg-2 position-relative">
+      <div class="hero-right rounded-3 overflow-hidden shadow-lg glass p-0">
+        <picture>
+          <source srcset="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" media="(min-width: 992px)">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="campus" class="w-100 h-100 object-cover" style="min-height:320px;">
+        </picture>
+
+        
+        <div class="position-absolute bottom-0 start-0 translate-middle-y ms-3 mb-3 p-3 rounded-3 bg-white/10 border border-white/5 d-flex gap-3 align-items-center">
+          <div class="text-center">
+            <div class="stat h4 mb-0" data-target="128">0</div>
+            <div class="small text-slate-200/70">Universities</div>
+          </div>
+          <div class="vr" style="height:36px"></div>
+          <div class="text-center">
+            <div class="stat h4 mb-0" data-target="42">0</div>
+            <div class="small text-slate-200/70">Programs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="mission" class="mt-8">
+    <div class="row align-items-center">
+      <div class="col-md-7">
+        <h2 class="h3 fw-bold">Our Mission</h2>
+        <p class="text-slate-200/80 mt-2">We make mission alignment visible. Students can search universities by values, social-impact metrics, and real student stories — while institutions measure and broadcast measurable social outcomes.</p>
+
+        <ul class="list-unstyled mt-4 row g-3">
+          <li class="col-sm-6">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="p-3 rounded-full bg-white/6">🎓</div>
+              <div>
+                <div class="fw-semibold">Transparency</div>
+                <div class="small text-slate-200/70">Clear, comparable impact metrics for every institution.</div>
+              </div>
+            </div>
+          </li>
+
+          <li class="col-sm-6">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="p-3 rounded-full bg-white/6">🌱</div>
+              <div>
+                <div class="fw-semibold">Equity</div>
+                <div class="small text-slate-200/70">Tools to highlight scholarships & outreach in underserved areas.</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-5">
+        <div class="p-4 glass rounded-3 shadow-sm">
+          <h3 class="h5 fw-bold mb-3">Quick impact highlights</h3>
+          <div class="d-flex flex-column gap-3">
+            <div class="d-flex justify-content-between">
+              <div class="small text-slate-200/80">Scholarships awarded</div>
+              <div class="fw-semibold">₹ 1.2Cr+</div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <div class="small text-slate-200/80">Community hours</div>
+              <div class="fw-semibold">18,400+</div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <div class="small text-slate-200/80">Partner NGOs</div>
+              <div class="fw-semibold">64</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="universities" class="mt-8">
+    <h2 class="h4 fw-bold">Featured Universities</h2>
+    <p class="text-slate-200/70">Browse verified profiles and social-impact dashboards.</p>
+
+    <div class="row g-4 mt-3">
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 glass rounded-3 h-100 d-flex flex-column justify-content-between">
+          <div>
+            <div class="d-flex align-items-start gap-3">
+              <div class="rounded-3 overflow-hidden" style="width:74px;height:74px;">
+                <img src="https://images.unsplash.com/photo-1502741126161-b048400d7d88?q=80&w=300&auto=format&fit=crop" alt="uni" class="w-100 h-100 object-cover">
+              </div>
+              <div>
+                <div class="fw-semibold">Northbridge Institute</div>
+                <div class="small text-slate-200/70">Strong community engagement & tech scholarships</div>
+              </div>
+            </div>
+
+            <div class="mt-4 d-flex gap-2 flex-wrap">
+              <span class="badge bg-white/5">Scholarships</span>
+              <span class="badge bg-white/5">Sustainability</span>
+              <span class="badge bg-white/5">STEM</span>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mt-4">
+            <a class="btn btn-sm btn-light" href="#">View profile</a>
+            <div class="small text-slate-200/80">Impact score <span class="fw-bold">8.9</span></div>
+          </div>
+        </div>
+      </div>
+
+     
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 glass rounded-3 h-100 d-flex flex-column justify-content-between">
+          <div>
+            <div class="d-flex align-items-start gap-3">
+              <div class="rounded-3 overflow-hidden" style="width:74px;height:74px;">
+                <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=300&auto=format&fit=crop" alt="uni2" class="w-100 h-100 object-cover">
+              </div>
+              <div>
+                <div class="fw-semibold">Riverdale College</div>
+                <div class="small text-slate-200/70">Community-first research programs</div>
+              </div>
+            </div>
+
+            <div class="mt-4 d-flex gap-2 flex-wrap">
+              <span class="badge bg-white/5">Research</span>
+              <span class="badge bg-white/5">Outreach</span>
+              <span class="badge bg-white/5">Health</span>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mt-4">
+            <a class="btn btn-sm btn-light" href="#">View profile</a>
+            <div class="small text-slate-200/80">Impact score <span class="fw-bold">9.3</span></div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 rounded-3 h-100 d-flex flex-column justify-content-between" style="background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(236,72,153,0.06)); border:1px solid rgba(255,255,255,0.04);">
+          <div>
+            <div class="d-flex align-items-start gap-3">
+              <div class="rounded-3 overflow-hidden" style="width:74px;height:74px;">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=300&auto=format&fit=crop" alt="uni3" class="w-100 h-100 object-cover">
+              </div>
+              <div>
+                <div class="fw-semibold">Coastal Tech University</div>
+                <div class="small text-slate-200/70">Startup partnerships & rural outreach</div>
+              </div>
+            </div>
+
+            <div class="mt-4 d-flex gap-2 flex-wrap">
+              <span class="badge bg-white/5">Innovation</span>
+              <span class="badge bg-white/5">Entrepreneurship</span>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mt-4">
+            <a class="btn btn-sm btn-white text-slate-900" href="#">View profile</a>
+            <div class="small text-slate-200/80">Impact score <span class="fw-bold">9.7</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-4">
+      <a class="btn btn-outline-light" href="#">See all universities</a>
+    </div>
+  </section>
+
+
+  <section id="stats" class="mt-8">
+    <h2 class="h4 fw-bold">Live social stats</h2>
+    <p class="text-slate-200/70">Real-time community metrics aggregated from our partner universities.</p>
+
+    <div class="row g-4 mt-3">
+      <div class="col-sm-6 col-md-3">
+        <div class="p-4 glass rounded-3 text-center">
+          <div class="h2 stat" data-target="38420">0</div>
+          <div class="small text-slate-200/70">Followers</div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-3">
+        <div class="p-4 glass rounded-3 text-center">
+          <div class="h2 stat" data-target="12894">0</div>
+          <div class="small text-slate-200/70">Active applicants</div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-3">
+        <div class="p-4 glass rounded-3 text-center">
+          <div class="h2 stat" data-target="642">0</div>
+          <div class="small text-slate-200/70">Scholarships live</div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-3">
+        <div class="p-4 glass rounded-3 text-center">
+          <div class="h2 stat" data-target="18400">0</div>
+          <div class="small text-slate-200/70">Community hours</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section class="mt-8 mb-12">
+    <div class="p-4 rounded-3 glass d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <div>
+        <div class="fw-bold h5 mb-1">Ready to showcase your program’s impact?</div>
+        <div class="small text-slate-200/70">Create a university profile and start tracking measurable outcomes.</div>
+      </div>
+
+      <div class="d-flex gap-2">
+        <a class="btn btn-lg btn-primary" href="#">Create profile</a>
+        <a class="btn btn-lg btn-outline-light" href="#">Contact sales</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="py-4 border-top border-white/5 text-slate-400 text-center small">
+  © <span id="year"></span> EduConnect — Built with empathy for learners
+</footer>
+
+<script>
+ 
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const counters = document.querySelectorAll('.stat');
+  const speed = 1800; 
+
+  function animateCounter(el) {
+    const target = +el.dataset.target;
+    const start = 0;
+    const stepTime = Math.max(Math.floor(speed / Math.max(target,1)), 12);
+    let current = start;
+    const step = () => {
+      current += Math.ceil(target / (speed / stepTime));
+      if (current >= target) { el.textContent = target.toLocaleString(); }
+      else { el.textContent = current.toLocaleString(); setTimeout(step, stepTime); }
+    };
+    step();
+  }
+
+  
+  const obs = new IntersectionObserver((entries, o) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        o.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.4});
+
+  counters.forEach(c => obs.observe(c));
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
